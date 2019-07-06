@@ -21,6 +21,7 @@
     "typescript"
   ],
   "devDependencies": {
+    "ava": "2.1.0",
     "coveralls": "^3.0.3",
     "nyc": "^13.3.0",
     "typescript": "^3.3.4000",
