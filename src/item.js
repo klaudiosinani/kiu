@@ -22,6 +22,10 @@ class Item {
   set prev(item) {
     this._prev = item;
   }
+
+  get value() {
+    return this._value;
+  }
 }
 
 module.exports = Item;
