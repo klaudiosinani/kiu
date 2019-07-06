@@ -1,0 +1,15 @@
+{
+  "name": "kiu",
+  "version": "0.0.0",
+  "description": "Queues for ES6",
+  "license": "MIT",
+  "repository": "klaussinani/kiu",
+  "author": {
+    "name": "Klaus Sinani",
+    "email": "klaussinani@gmail.com",
+    "url": "https://klaussinani.github.io"
+  },
+  "engines": {
+    "node": ">=6"
+  }
+}
