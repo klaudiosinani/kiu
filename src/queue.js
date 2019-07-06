@@ -10,6 +10,14 @@ class Queue {
   get length() {
     return this._length;
   }
+
+  _peek(item) {
+    if (item) {
+      return item.value;
+    }
+
+    return undefined;
+  }
 }
 
 module.exports = Queue;
