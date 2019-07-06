@@ -26,6 +26,10 @@ class Item {
   get value() {
     return this._value;
   }
+
+  set value(value) {
+    this._value = value;
+  }
 }
 
 module.exports = Item;
