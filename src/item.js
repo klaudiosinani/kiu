@@ -14,6 +14,10 @@ class Item {
   set next(item) {
     this._next = item;
   }
+
+  get prev() {
+    return this._prev;
+  }
 }
 
 module.exports = Item;
