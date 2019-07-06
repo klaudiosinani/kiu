@@ -1,6 +1,9 @@
 'use strict';
 
 class Item {
+  constructor() {
+    this._next = null;
+  }
 
 }
 
