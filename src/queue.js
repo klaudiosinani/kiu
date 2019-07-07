@@ -18,6 +18,10 @@ class Queue {
 
     return undefined;
   }
+
+  peekFirst() {
+    return this._peek(this._head);
+  }
 }
 
 module.exports = Queue;
