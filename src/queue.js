@@ -26,6 +26,10 @@ class Queue {
     return this;
   }
 
+  isEmpty() {
+    return !this._head && !this._last && this._length === 0;
+  }
+
   peekFirst() {
     return this._peek(this._head);
   }
