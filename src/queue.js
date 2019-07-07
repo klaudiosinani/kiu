@@ -22,6 +22,10 @@ class Queue {
   peekFirst() {
     return this._peek(this._head);
   }
+
+  peekLast() {
+    return this._peek(this._last);
+  }
 }
 
 module.exports = Queue;
