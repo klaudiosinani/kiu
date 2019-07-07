@@ -6,6 +6,7 @@ declare namespace queue {
   export interface Instance<T> {
     readonly length: number;
     clear(): this;
+    enqueue(value: T): this;
     isEmpty(): boolean;
     peekFirst(): T | undefined;
     peekLast(): T | undefined;

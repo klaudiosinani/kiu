@@ -1,4 +1,5 @@
 'use strict';
+const Item = require('./item');
 
 class Queue {
   constructor() {
@@ -23,6 +24,21 @@ class Queue {
     this._head = null;
     this._last = null;
     this._length = 0;
+    return this;
+  }
+
+  enqueue(value) {
+    const item = new Item(value);
+
+    if (this.isEmpty()) {
+      this._head = item;
+    } else {
+      item.prev = this._last;
+      this._last.next = item;
+    }
+
+    this._last = item;
+    this._length += 1;
     return this;
   }
 
