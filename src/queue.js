@@ -42,6 +42,17 @@ class Queue {
     return this;
   }
 
+  forEach(fn) {
+    let {_head: item} = this;
+
+    while (item) {
+      fn(item.value);
+      item = item.next;
+    }
+
+    return this;
+  }
+
   isEmpty() {
     return !this._head && !this._last && this._length === 0;
   }
