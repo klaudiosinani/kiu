@@ -7,6 +7,7 @@ declare namespace queue {
     readonly length: number;
     clear(): this;
     enqueue(value: T): this;
+    forEach(fn: (x: T) => void): this;
     isEmpty(): boolean;
     peekFirst(): T | undefined;
     peekLast(): T | undefined;
