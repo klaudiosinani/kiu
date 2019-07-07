@@ -3,7 +3,9 @@ declare namespace queue {
     new <T = any>(): Instance<T>;
   }
 
-  export interface Instance<T> {}
+  export interface Instance<T> {
+    peekFirst(): T | undefined;
+  }
 }
 
 declare namespace kiu {
