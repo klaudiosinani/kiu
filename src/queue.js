@@ -32,6 +32,18 @@ class Queue {
     return item;
   }
 
+  _traverseRight(n) {
+    let count = this.length - (n + 1);
+    let {_last: item} = this;
+
+    while (count !== 0) {
+      item = item.prev;
+      count -= 1;
+    }
+
+    return item;
+  }
+
   clear() {
     this._head = null;
     this._last = null;
