@@ -78,6 +78,12 @@ class Queue {
   peekLast() {
     return this._peek(this._last);
   }
+
+  toArray() {
+    const array = [];
+    this.forEach(x => array.push(x));
+    return array;
+  }
 }
 
 module.exports = Queue;

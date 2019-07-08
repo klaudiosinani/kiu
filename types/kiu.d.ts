@@ -12,6 +12,7 @@ declare namespace queue {
     isEmpty(): boolean;
     peekFirst(): T | undefined;
     peekLast(): T | undefined;
+    toArray(): T[];
   }
 }
 
