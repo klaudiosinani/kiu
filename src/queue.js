@@ -27,6 +27,26 @@ class Queue {
     return this;
   }
 
+  dequeue() {
+    const {_head} = this;
+
+    if (_head) {
+      const {next, value} = _head;
+
+      if (next) {
+        next.prev = null;
+      } else {
+        this._last = null;
+      }
+
+      this._head = next;
+      this._length -= 1;
+      return value;
+    }
+
+    return undefined;
+  }
+
   enqueue(value) {
     const item = new Item(value);
 
