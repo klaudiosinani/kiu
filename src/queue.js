@@ -139,6 +139,10 @@ class Queue {
     return this;
   }
 
+  nth(n) {
+    return this._peek(this._nthItem(n));
+  }
+
   peekFirst() {
     return this._peek(this._head);
   }
