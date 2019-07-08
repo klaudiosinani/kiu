@@ -53,6 +53,20 @@ class Queue {
     return this;
   }
 
+  includes(value) {
+    let {_head: item} = this;
+
+    while (item) {
+      if (item.value === value) {
+        return true;
+      }
+
+      item = item.next;
+    }
+
+    return false;
+  }
+
   isEmpty() {
     return !this._head && !this._last && this._length === 0;
   }
