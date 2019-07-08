@@ -11,6 +11,7 @@ declare namespace queue {
     forEach(fn: (x: T) => void): this;
     includes(value: T): boolean;
     isEmpty(): boolean;
+    map<U>(fn: (value: T) => U): Instance<U>;
     peekFirst(): T | undefined;
     peekLast(): T | undefined;
     reverse(): this;

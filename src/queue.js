@@ -91,6 +91,18 @@ class Queue {
     return !this._head && !this._last && this._length === 0;
   }
 
+  map(fn) {
+    let {_head: current} = this;
+
+    while (current) {
+      const {next, value} = current;
+      current.value = fn(value);
+      current = next;
+    }
+
+    return this;
+  }
+
   peekFirst() {
     return this._peek(this._head);
   }
