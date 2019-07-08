@@ -79,6 +79,28 @@ class Queue {
     return this._peek(this._last);
   }
 
+  reverse() {
+    let {_head: current} = this;
+
+    while (current) {
+      const {prev, next} = current;
+      current.next = prev;
+      current.prev = next;
+
+      if (!prev) {
+        this._last = current;
+      }
+
+      if (!next) {
+        this._head = current;
+      }
+
+      current = next;
+    }
+
+    return this;
+  }
+
   toArray() {
     const array = [];
     this.forEach(x => array.push(x));
