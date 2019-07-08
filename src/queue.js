@@ -20,6 +20,18 @@ class Queue {
     return undefined;
   }
 
+  _traverse(n) {
+    let count = 0;
+    let {_head: item} = this;
+
+    while (n !== count) {
+      item = item.next;
+      count += 1;
+    }
+
+    return item;
+  }
+
   clear() {
     this._head = null;
     this._last = null;
