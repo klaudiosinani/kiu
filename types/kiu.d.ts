@@ -12,6 +12,7 @@ declare namespace queue {
     includes(value: T): boolean;
     isEmpty(): boolean;
     map<U>(fn: (value: T) => U): Instance<U>;
+    nth(n: number): T | undefined;
     peekFirst(): T | undefined;
     peekLast(): T | undefined;
     reverse(): this;
