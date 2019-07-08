@@ -6,7 +6,7 @@ declare namespace queue {
   export interface Instance<T> {
     readonly length: number;
     clear(): this;
-    dequeue(): T;
+    dequeue(): T | undefined;
     enqueue(value: T): this;
     forEach(fn: (x: T) => void): this;
     includes(value: T): boolean;
