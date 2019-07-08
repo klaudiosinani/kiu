@@ -20,6 +20,18 @@ class Queue {
     return undefined;
   }
 
+  _nthItem(n) {
+    const {length} = this;
+
+    if (n >= 0 && n < length) {
+      if (n <= Math.floor(length / 2)) {
+        return this._traverse(n);
+      }
+
+      return this._traverseRight(n);
+    }
+  }
+
   _traverse(n) {
     let count = 0;
     let {_head: item} = this;
