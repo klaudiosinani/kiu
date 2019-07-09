@@ -40,8 +40,8 @@ class Queue {
       this._head.prev = _last;
       this._head = nth.next;
       this._head.prev = null;
-      this._tail = nth;
-      this._tail.next = null;
+      this._last = nth;
+      this._last.next = null;
     }
 
     return this;
