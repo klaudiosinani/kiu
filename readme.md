@@ -3,7 +3,7 @@
 </h1>
 
 <h4 align="center">
-  Queues for ES6
+  FIFO Queues for ES6
 </h4>
 
 <p align="center">
@@ -29,6 +29,7 @@ Visit the [contributing guidelines](https://github.com/klaussinani/kiu/blob/mast
 - [Install](#install)
 - [Development](#development)
 - [Related](#related)
+- [Team](#team)
 - [License](#license)
 
 ## Install
@@ -63,6 +64,10 @@ For more info on how to contribute to the project, please read the [contributing
 - [prioqueue](https://github.com/klaussinani/prioqueue) - Priority queues for ES6
 - [shtack](https://github.com/klaussinani/shtack) - LIFO Stacks for ES6
 - [singlie](https://github.com/klaussinani/singlie) - Singly circular & linear linked lists for ES6
+
+## Team
+
+- Klaus Sinani [(@klaussinani)](https://github.com/klaussinani)
 
 ## License
 
