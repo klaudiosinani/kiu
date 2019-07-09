@@ -16,6 +16,7 @@ declare namespace queue {
     peekFirst(): T | undefined;
     peekLast(): T | undefined;
     reverse(): this;
+    rotateRight(n: number): this;
     toArray(): T[];
   }
 }

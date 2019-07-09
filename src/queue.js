@@ -188,6 +188,10 @@ class Queue {
     return this;
   }
 
+  rotateRight(n) {
+    return this._rotate(n);
+  }
+
   toArray() {
     const array = [];
     this.forEach(x => array.push(x));
