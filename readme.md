@@ -26,3 +26,18 @@ Visit the [contributing guidelines](https://github.com/klaussinani/kiu/blob/mast
 ## Contents
 
 - [Description](#description)
+- [Install](#install)
+
+## Install
+
+### Yarn
+
+```bash
+yarn add kiu
+```
+
+### NPM
+
+```bash
+npm install kiu
+```
