@@ -27,6 +27,7 @@ Visit the [contributing guidelines](https://github.com/klaussinani/kiu/blob/mast
 
 - [Description](#description)
 - [Install](#install)
+- [License](#license)
 
 ## Install
 
@@ -41,3 +42,7 @@ yarn add kiu
 ```bash
 npm install kiu
 ```
+
+## License
+
+[MIT](https://github.com/klaussinani/kiu/blob/master/license.md)
