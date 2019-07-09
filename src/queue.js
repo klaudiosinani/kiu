@@ -188,6 +188,10 @@ class Queue {
     return this;
   }
 
+  rotateLeft(n) {
+    return this._rotate(this.length - n);
+  }
+
   rotateRight(n) {
     return this._rotate(n);
   }
