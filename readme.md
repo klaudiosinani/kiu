@@ -14,3 +14,15 @@
     <img alt="Coverage Status" src="https://coveralls.io/repos/github/klaussinani/kiu/badge.svg?branch=master">
   </a>
 </p>
+
+## Description
+
+ES6 implementation of the FIFO queue data structure with TypeScript support.
+
+Come over to [Twitter](https://twitter.com/klaussinani) to share your thoughts on the project.
+
+Visit the [contributing guidelines](https://github.com/klaussinani/kiu/blob/master/contributing.md#translating-documentation) to learn more on how to translate this document into more languages.
+
+## Contents
+
+- [Description](#description)
