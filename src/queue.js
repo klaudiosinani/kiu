@@ -12,14 +12,6 @@ class Queue {
     return this._length;
   }
 
-  _peek(item) {
-    if (item) {
-      return item.value;
-    }
-
-    return undefined;
-  }
-
   _nthItem(n) {
     const {length} = this;
 
@@ -30,6 +22,29 @@ class Queue {
 
       return this._traverseRight(n);
     }
+  }
+
+  _peek(item) {
+    if (item) {
+      return item.value;
+    }
+
+    return undefined;
+  }
+
+  _rotate(n) {
+    if (n > 0 && n < this.length) {
+      const {_head, _last} = this;
+      const nth = this._nthItem(n - 1);
+      this._last.next = _head;
+      this._head.prev = _last;
+      this._head = nth.next;
+      this._head.prev = null;
+      this._tail = nth;
+      this._tail.next = null;
+    }
+
+    return this;
   }
 
   _traverse(n) {
