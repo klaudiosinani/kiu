@@ -400,7 +400,7 @@ queue.map(x => x * 10);
 
 #### queue.`nth(n)`
 
-- Return Type: ` | undefined`
+- Return Type: `Any | undefined`
 
 Traverses the queue, from front to rear, and returns the nth value. If the value does not exist, then `undefined` is returned. The queue values follow zero-based numbering, thus the first/initial value corresponds to index 0.
 
