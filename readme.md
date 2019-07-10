@@ -27,6 +27,7 @@ Visit the [contributing guidelines](https://github.com/klaussinani/kiu/blob/mast
 
 - [Description](#description)
 - [Install](#install)
+- [In Depth](#in-depth)
 - [Development](#development)
 - [Related](#related)
 - [Team](#team)
@@ -45,6 +46,10 @@ yarn add kiu
 ```bash
 npm install kiu
 ```
+
+## In Depth
+
+A queue is a linear data structure, or more abstractly a sequential collection, in which the entities are kept in order and the principal operations are the addition of entities to the rear terminal position, known as `enqueue`, and removal of entities from the front terminal position, known as `dequeue`. This makes the queue a `FIFO`, First-In-First-Out, data structure. In this FIFO data structure, the first element added to the queue will be the first one to be removed. Once a new element is added, all elements that were added previously have to be removed before the new one can. Additionally, a `peekFirst` operation returns the value of the front element without dequeuing it, and a `peakLast` operation returns the value of the rear element, without mutating the queue as well. Kiu FIFO queues use a linear doubly linked list as their backbone, giving an efficient `O(1)` performance for the enqueuing and dequeuing operations.
 
 ## Development
 
