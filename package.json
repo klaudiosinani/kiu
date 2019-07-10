@@ -13,6 +13,11 @@
     "node": ">=6"
   },
   "types": "types/kiu.d.ts",
+  "files": [
+    "src",
+    "types",
+    "index.js"
+  ],
   "keywords": [
     "queue",
     "fifo",
