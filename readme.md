@@ -28,6 +28,7 @@ Visit the [contributing guidelines](https://github.com/klaussinani/kiu/blob/mast
 - [Description](#description)
 - [Install](#install)
 - [In Depth](#in-depth)
+- [Usage](#usage)
 - [Development](#development)
 - [Related](#related)
 - [Team](#team)
@@ -50,6 +51,102 @@ npm install kiu
 ## In Depth
 
 A queue is a linear data structure, or more abstractly a sequential collection, in which the entities are kept in order and the principal operations are the addition of entities to the rear terminal position, known as `enqueue`, and removal of entities from the front terminal position, known as `dequeue`. This makes the queue a `FIFO`, First-In-First-Out, data structure. In this FIFO data structure, the first element added to the queue will be the first one to be removed. Once a new element is added, all elements that were added previously have to be removed before the new one can. Additionally, a `peekFirst` operation returns the value of the front element without dequeuing it, and a `peakLast` operation returns the value of the rear element, without mutating the queue as well. Kiu FIFO queues use a linear doubly linked list as their backbone, giving an efficient `O(1)` performance for the enqueuing and dequeuing operations.
+
+## Usage
+
+Kiu exposes a chainable API, that can be utilized through a simple and minimal syntax, allowing you to combine methods effectively.
+
+Usage examples can be also found at the [`test`](https://github.com/klaussinani/kiu/tree/master/test) directory.
+
+```js
+'use strict';
+const {Queue} = require('kiu');
+
+const queue = new Queue();
+//=> Queue { head: null, last: null, length: 0 }
+
+queue.isEmpty();
+//=> true
+
+queue.enqueue(10);
+//=> Queue {
+// head: Item { value: 10, next: null, prev: null },
+// last: Item { value: 10, next: null, prev: null },
+// length: 1 }
+
+queue.isEmpty();
+//=> false
+
+queue.peekFirst();
+//=> 10
+
+queue
+  .enqueue(20)
+  .enqueue(30)
+  .enqueue(40)
+  .enqueue(50);
+//=> Queue {
+// head:
+//   Item { value: 10, prev: null, next:
+//   Item { value: 20, prev: [Circular], next: [Item] } },
+// last:
+//   Item { value: 50, next: null, prev:
+//   Item { value: 40, next: [Circular], prev: [Item] } },
+// length: 5 }
+
+queue.includes(30);
+//=> true
+
+queue.includes(60);
+//=> false
+
+queue.dequeue();
+//=> 10
+
+queue.peekFirst();
+//=> 20
+
+queue.peekLast();
+//=> 50
+
+queue.toArray();
+//=> [ 20, 30, 40, 50 ]
+
+queue.rotateRight(1);
+//=> Queue {
+// head:
+//   Item { value: 30, prev: null, next:
+//   Item { value: 40, prev: [Circular], next: [Item] } },
+// last:
+//   Item { value: 20, next: null, prev:
+//   Item { value: 50, next: [Circular], prev: [Item] } },
+// length: 4 }
+
+queue.toArray();
+//=> [ 30, 40, 50, 20 ]
+
+queue.rotateLeft(3);
+//=> Queue {
+// head:
+//   Item { value: 40, prev: null, next:
+//   Item { value: 50, prev: [Circular], next: [Item] } },
+// last:
+//   Item { value: 30, next: null, prev:
+//   Item { value: 20, next: [Circular], prev: [Item] } },
+// length: 4 }
+
+queue.toArray();
+//=> [ 40, 50, 20, 30 ]
+
+queue
+  .reverse()
+  .map(x => x * 10)
+  .toArray();
+//=> [ 300, 200, 500, 400 ]
+
+queue.nth(2);
+//=> 500
+```
 
 ## Development
 
