@@ -1,6 +1,6 @@
 {
   "name": "kiu",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "FIFO Queues for ES6",
   "license": "MIT",
   "repository": "klaussinani/kiu",
