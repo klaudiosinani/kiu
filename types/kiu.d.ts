@@ -1,6 +1,6 @@
 declare namespace queue {
   export interface Constructor {
-    new <T = any>(): Instance<T>;
+    new <T = unknown>(): Instance<T>;
   }
 
   export interface Instance<T> {
@@ -23,7 +23,7 @@ declare namespace queue {
 }
 
 declare namespace kiu {
-  export interface Queue<T = any> extends queue.Instance<T> {}
+  export interface Queue<T = unknown> extends queue.Instance<T> {}
 }
 
 declare const kiu: {
